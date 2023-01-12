@@ -17,7 +17,6 @@ heracles.shield = bouclier
 
 /** Create the opponent  */
 const boar = new Fighter("🐗 Erymanthian Boar", 25, 12);
-
 /**
  * Helper to produce the result of a round
  */
@@ -37,3 +36,6 @@ const score = (fighter1, fighter2) => {
     loser: fighter1
   };
 };
+
+console.log(roundDisplay(heracles, boar));
+console.log(score(heracles, boar));
