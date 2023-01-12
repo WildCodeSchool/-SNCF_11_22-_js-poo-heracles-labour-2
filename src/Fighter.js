@@ -6,14 +6,17 @@ class Fighter {
         this.strength = strength;
         this.dexterity = dexterity;
         this.life = MAX_LIFE;
+        
+        this.weapon=null;
+        this.shield=null;
     }
 
 
     // Launch a fight
-    fight(defender) {
-        const attackPoints = this.getRandomInt(this.strength);
+    Attaque(defender) {
+        const attackPoints = this.getRandomInt(this.getDamage());
 
-        const damages = Math.max(attackPoints - defender.dexterity, 0);
+        const damages = Math.max(attackPoints - defender.getDefense(), 0);
 
         defender.life = Math.max(defender.life - damages, 0);
     }
@@ -29,6 +32,27 @@ class Fighter {
     isAlive() {
         return this.life > 0;
     }
+
+
+    getDamage(){
+        if(this.weapon === null){
+            return this.strength
+        }else{
+       return this.strength + this.weapon.damage
+        }
+    }
+
+
+    getDefense(){
+        if(this.shield === null){
+            return this.dexterity
+        }else{
+            return this.dexterity + this.shield.protection
+        }
+        
+    }
+
 }
+
 
 module.exports = Fighter;
