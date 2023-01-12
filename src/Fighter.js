@@ -6,14 +6,25 @@ class Fighter {
         this.strength = strength;
         this.dexterity = dexterity;
         this.life = MAX_LIFE;
+        this.weapon = null;
+        this.shield = null;
     }
-
+    getDamage(){
+        if(this.weapon !== null){
+            return this.strength + this.weapon.damage
+        } return this.strength;
+    }
+    getDefense(){
+        if(this.shield !== null){
+            return  this.dexterity + this.shield.protection;
+        }return this.dexterity;
+    }
 
     // Launch a fight
     fight(defender) {
-        const attackPoints = this.getRandomInt(this.strength);
+        const attackPoints = this.getRandomInt(this.getDamage());
 
-        const damages = Math.max(attackPoints - defender.dexterity, 0);
+        const damages = Math.max(attackPoints - defender.getDefense(), 0);
 
         defender.life = Math.max(defender.life - damages, 0);
     }
