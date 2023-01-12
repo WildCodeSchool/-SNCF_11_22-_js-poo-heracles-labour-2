@@ -1,5 +1,6 @@
+const Shield = require("./src/Fighter.js");
 const Fighter = require("./src/Fighter.js");
-
+const Weapon = require("./src/Fighter.js");
 /** Create Heracles  */
 const heracles = new Fighter("🧔 Heracles", 20, 6);
 
@@ -17,11 +18,19 @@ const roundDisplay = (fighter1, fighter2) => {
  * Helper to dispatch fighters between winner and loser
  */
 const score = (fighter1, fighter2) => {
-  return fighter1.isAlive() ? {
-    winner: fighter1,
-    loser: fighter2,
-  } : {
-    winner: fighter2,
-    loser: fighter1
-  };
+  return fighter1.isAlive()
+    ? {
+        winner: fighter1,
+        loser: fighter2,
+      }
+    : {
+        winner: fighter2,
+        loser: fighter1,
+      };
 };
+
+const arme = new Weapon("Épée", 10);
+heracles.weapon = arme;
+
+const bouclier = new Shield("bouclier", 10);
+heracles.shield = bouclier;
