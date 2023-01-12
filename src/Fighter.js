@@ -52,11 +52,7 @@ return this.dexterity + this.shield.protection;
         return this.life > 0;
     }
 
-    // determine nombre de points de vie
 
-    isAlive2(){
-        return this.life;
-    }
 
 
 }

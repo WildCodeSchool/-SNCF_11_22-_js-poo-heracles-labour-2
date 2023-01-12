@@ -39,3 +39,24 @@ const score = (fighter1, fighter2) => {
     loser: fighter1
   };
 };
+
+//
+
+function bigFight(fighter1, fighter2){
+  let i =0;
+  while(fighter1.isAlive() && fighter2.isAlive()){
+    i++;
+    console.log(`MANCHE ${i}`)
+fighter1.fight(fighter2);
+fighter2.fight(fighter1);
+  }
+
+ if(fighter1.isAlive() === true){
+  console.log('Le joueur 1 a gagné');
+ }else{
+  console.log('le joueur 2 a gagné');
+ }
+  
+}
+
+bigFight(heracles, boar);
