@@ -18,9 +18,7 @@ class Fighter {
 
     defender.life = Math.max(defender.life - damages, 0);
 
-    const degats = this.getDamage(this.life);
 
-    const bouclier = (this.dexterity += this.protection);
   }
 
   // Generate a random value between 1 and max
@@ -33,31 +31,9 @@ class Fighter {
     return this.life > 0;
   }
 
-  getDamage() {
-    return (this.strength += this.fight.damages);
-  }
 
-  getDefense() {
-    return (this.dexterity += this.protection);
-  }
+ 
 }
 
 module.exports = Fighter;
 
-class Weapon {
-  constructor(name) {
-    this.name = name;
-    this.damage = 10;
-  }
-}
-
-module.exports = Weapon;
-
-class Shield {
-  constructor(name) {
-    this.name = name;
-    this.protection = 10;
-  }
-}
-
-module.exports = Shield;
