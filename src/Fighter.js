@@ -7,7 +7,7 @@ class Fighter {
         this.dexterity = dexterity;
         this.life = MAX_LIFE;
         this.weapon = null;
-        this.field = null;
+        this.shield = null;
     }
 
 
