@@ -1,7 +1,19 @@
 const Fighter = require("./src/Fighter.js");
+const Sword = require("./src/Weapon.js");
+const Shield = require("./src/Shield.js");
+/** Create weapon */
+
+const epee = new Sword("Epee");
+
+// Create shield
+
+const bouclier = new Shield("Greek");
 
 /** Create Heracles  */
 const heracles = new Fighter("🧔 Heracles", 20, 6);
+heracles.weapon = epee
+heracles.shield = bouclier
+
 
 /** Create the opponent  */
 const boar = new Fighter("🐗 Erymanthian Boar", 25, 12);
