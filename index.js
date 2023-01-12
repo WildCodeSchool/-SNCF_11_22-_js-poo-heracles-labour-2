@@ -1,6 +1,6 @@
 const Shield = require("./src/Fighter.js");
 const Fighter = require("./src/Fighter.js");
-const Weapon = require("./src/Fighter.js");
+
 /** Create Heracles  */
 const heracles = new Fighter("🧔 Heracles", 20, 6);
 
@@ -29,8 +29,3 @@ const score = (fighter1, fighter2) => {
       };
 };
 
-const arme = new Weapon("Épée", 10);
-heracles.weapon = arme;
-
-const bouclier = new Shield("bouclier", 10);
-heracles.shield = bouclier;
