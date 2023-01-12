@@ -1,7 +1,13 @@
 const Fighter = require("./src/Fighter.js");
+const Weapon = require("./src/Weapon.js");
+const Shield = require("./src/Shield.js");
 
 /** Create Heracles  */
 const heracles = new Fighter("🧔 Heracles", 20, 6);
+const epee = new Weapon("Epee");
+heracles.weapon = epee;
+const bouclier = new Shield("Bouclier");
+heracles.shield = bouclier;
 
 /** Create the opponent  */
 const boar = new Fighter("🐗 Erymanthian Boar", 25, 12);
@@ -25,3 +31,5 @@ const score = (fighter1, fighter2) => {
     loser: fighter1
   };
 };
+console.log(roundDisplay(boar, heracles))
+console.log(score(boar, heracles))
