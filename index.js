@@ -34,3 +34,5 @@ heracles.weapon = arme;
 
 const bouclier = new Shield("bouclier", 10);
 heracles.shield = bouclier;
+
+
