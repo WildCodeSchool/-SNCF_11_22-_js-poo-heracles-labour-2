@@ -4,8 +4,7 @@ const Shield = require("./src/Shield.js");
 
 const epee = new Weapon("épée", 20);
 const shield = new Shield();
-const peau = new Shield(20);
-const defense= new Weapon("défense",5)
+
 /** Create Heracles  */
 const heracles = new Fighter("🧔 Heracles", 20, 6, epee, shield);
 
@@ -31,7 +30,7 @@ const score = (fighter1, fighter2) => {
     loser: fighter1
   };
 };
-
+// FIGHT//
 const fight = (fighter1, fighter2) => {
   while (fighter1.life > 0 && fighter2.life > 0) {
 
@@ -48,4 +47,5 @@ const fight = (fighter1, fighter2) => {
   }
   console.log(score(fighter1, fighter2))
 }
+
 fight(heracles, boar)
